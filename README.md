@@ -38,8 +38,14 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
     ```bash
     docker-compose up
     ```
+    it should look like this
+   ![image](https://github.com/JeanJK23/Hootsi_challenge_flask/assets/169025771/767fd99d-6f66-423d-9300-576043b4f1e7)
 
-5. Once the services are up and running, you can access the Flask application at `http://localhost:4000`.
+   (Don't worry about "flask_app Error")
+   Wait a few minutes until it finishes.
+
+
+6. Once the services are up and running, you can access the Flask application at `http://localhost:4000`.
 
 ## Configuration
 
