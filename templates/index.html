@@ -1,0 +1,50 @@
+{% extends 'master.html' %}
+{% include 'header.html' %}
+
+{% block title %} Crear Item {% endblock %}
+
+{% block body %}
+
+<div class="container">
+	<div>
+		<div class="col-md-12 text-center"><h1>Inventory</h1></div>
+	</div>
+
+	<table class="table table-hover table-striped table-bordered" id="example">
+		<!-- <thead style="background-color: orange; color: darkblue;"> -->
+        <thead style="background-color: #19915b; color: #3c4240;">
+            
+			<th>Id</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Mac Address</th>
+			<th>Serial Number</th>
+			<th>Manufacturer</th>
+			<th>Description</th>
+		</thead>
+		<tbody>
+			{% for item in items %}
+			<tr>
+				<td>{{ item.id }}</td>
+				<td>{{ item.name }}</td>
+				<td>{{ item.price }}</td>
+				<td>{{ item.mac_address }}</td>
+				<td>{{ item.serial_number }}</td>
+				<td>{{ item.manufacturer }}</td>
+				<td>{{ item.description }}</td>
+				<td>
+					<span style="font-size: 24px;">
+                        <a href="/edit/{{ item.id }}"> <i class="fa-regular fa-pen-to-square" style="color: #035426;"></i> </a>
+					</span>
+
+					<span style="font-size: 24px;">
+                        <a href="/delete/{{ item.id }}"> <i class="fa-solid fa-trash" style="color: #b80a0a;"></i> </a>
+					</span>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}

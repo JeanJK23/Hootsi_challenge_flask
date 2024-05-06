@@ -1,0 +1,21 @@
+{% extends 'master.html' %}
+{% include 'header.html' %}
+
+{% block title %} Principal {% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h5 class="mb-0">Confirm Deletion</h5>
+            </div>
+            <div class="card-body">
+                <p>Are you sure you want to delete?</p>
+                <form action="" method="post" id="deleteForm">
+                    <button type="submit" class="btn btn-danger mr-2" id="confirmDeleteBtn">Yes</button>
+                    <a href="/" class="btn btn-secondary">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

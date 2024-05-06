@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  flask_app:
+    container_name: flask_app
+    image: hootsi_jk/excercise:1.0
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      DB_URL: 'mysql://root2:secret2@mysql_db:3306/dev'
+    volumes:
+      - ./:/app
+    restart: always
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+
+  mysql_db:
+    image: mysql:8.0.28
+    container_name: mysql_db
+    ports:
+      - 3306:3306
+
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: dev
+      MYSQL_USER: root2
+      MYSQL_PASSWORD: secret2
+    
+    healthcheck:
+      test: ["CMD", "mysqladmin", "-u$MYSQL_USER", "-p$MYSQL_PASSWORD",  "ping", "-h", "localhost"]
+      #interval: 7s
+      #timeout: 23s
+      retries: 4
+      start_period: 60s
+    
+    volumes:
+      - mysql_data_crud_flask_hootsi:/var/lib/mysql
+
+volumes:
+  mysql_data_crud_flask_hootsi: {}
+    
+
+
