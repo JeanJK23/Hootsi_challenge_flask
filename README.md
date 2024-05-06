@@ -36,7 +36,7 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
 4. Run the following command to start the application and database services using Docker Compose:
 
     ```bash
-    docker-compose up flask_app
+    docker-compose up
     ```
 
 5. Once the services are up and running, you can access the Flask application at `http://localhost:4000`.
