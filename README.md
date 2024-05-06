@@ -22,7 +22,7 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone 
+    git clone https://github.com/JeanJK23/Hootsi_challenge_flask.git
     ```
 
 2. Navigate to the project directory:
@@ -40,27 +40,6 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
     ```
 
 5. Once the services are up and running, you can access the Flask application at `http://localhost:4000`.
-
-## Project Structure
-
-The project structure is as follows:
-
-Hootsi_project/
-│
-│
-├── templates/             # HTML templates
-│   ├── create.html
-│   ├── delete.html
-│   ├── header.html
-│   ├── index.html
-│   ├── master.html
-│   └── update.html
-├── app.py                # Flask app with routes & SQLAlchemy model
-├── docker-compose.yml    # Docker Compose configuration file
-├── Dockerfile            # Dockerfile for Flask application
-├── requirements.txt      # Python dependencies
-└── README.md             # Project documentation
-
 
 ## Configuration
 
