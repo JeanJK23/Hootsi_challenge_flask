@@ -8,6 +8,8 @@ services:
     ports:
       - "4000:4000"
     environment:
+      # NOTE: This critical data is exposed for testing purposes only.
+      # It is not recommended hard coded sensitive info in the code
       DB_URL: 'mysql://root2:secret2@mysql_db:3306/dev'
     volumes:
       - ./:/app
@@ -23,6 +25,8 @@ services:
       - 3306:3306
 
     environment:
+      # NOTE: This critical data is exposed for testing purposes only.
+      # It is not recommended hard coded sensitive info in the code
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: dev
       MYSQL_USER: root2
