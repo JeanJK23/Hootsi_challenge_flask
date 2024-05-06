@@ -28,7 +28,7 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
 2. Navigate to the project directory:
 
     ```bash
-    cd hootsi_project
+    cd Hootsi_challenge_flask
     ```
 
 3. Ensure Docker is running on your machine.
