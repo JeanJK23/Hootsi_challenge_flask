@@ -44,8 +44,19 @@ Before you begin, ensure you have Docker and Docker Compose installed on your sy
    (Don't worry about "flask_app Error")
    Wait a few minutes until it finishes.
 
+   After finishing:
+   ![image](https://github.com/JeanJK23/Hootsi_challenge_flask/assets/169025771/8f1945c8-748d-470e-8f71-34c48700efcc)
+
+
 
 6. Once the services are up and running, you can access the Flask application at `http://localhost:4000`.
+   ![image](https://github.com/JeanJK23/Hootsi_challenge_flask/assets/169025771/2e18c9a2-85b0-4754-b200-352816c2ff3c)
+
+7. Now you can do basic CRUD operations
+   Create an Item for example:
+   ![image](https://github.com/JeanJK23/Hootsi_challenge_flask/assets/169025771/c5d00ba7-138f-4eac-8a94-2ebaf50b686a)
+
+
 
 ## Configuration
 
